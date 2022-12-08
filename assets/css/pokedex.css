@@ -1,3 +1,9 @@
+h1 {
+    text-align: center;
+    border-radius: 1rem;
+    background-color: blueviolet;
+    color: aliceblue;
+}
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -144,6 +150,26 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+table {
+    width: min-content;
+}
+tr {
+    border: 0;
+    display: block;
+}
+td {
+    padding: 0.125rem;
+}
+
+.highlight {
+    background-color: #000;
+    opacity: .3;
+    text-align: center;
+    font-size: .625rem;
+    border-radius: 1rem;
+    border: 1px white solid;
 }
 
 @media screen and (min-width: 380px) {
