@@ -20,6 +20,8 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/pokemon-detail.css">
+    <link rel="stylesheet" href="/assets/css/tab-styles.css">
 </head>
 
 <body>
@@ -35,9 +37,105 @@
                 Load More
             </button>
         </div>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content pokemon">
+                <span class="close">&times;</span>
+
+                <div class="pokemon" id="modalPokemon">
+                    <span class="number" id="number"></span>
+                    <span class="name" id="name"></span>
+                    <table>
+                        <tr class="highlight">
+                            <td class="name">height</td>
+                            <td class="name" id="height"> </td>
+                        </tr>
+                        <tr class="highlight">
+                            <td class="name">weight</td>
+                            <td class="name" id="weight"> </td>
+                        </tr>
+                    </table>
+
+                    <div class="detail" id="typesAndDetails">
+                        <ol class="types" id="olTypes">
+                            <!--Lista de tipos aqui-->
+                        </ol>
+                        <div id="modalPokemonImg">
+                            <!--Imagem do pokemon aqui-->
+                        </div>
+                    </div>
+                    <div class="tabs-details">
+                        <div class="tab">
+                            <div style="display: flex;">
+                                <button class="tablinks" type="button" onclick="openCity(event, 'about')" id="defaultOpen">About</button>
+                                <button class="tablinks" type="button" onclick="openCity(event, 'baseStats')">Base Stats</button>
+                                <button class="tablinks" type="button" onclick="openCity(event, 'moves')">Moves</button>
+                            </div>
+                            
+                            <!-- Tab content -->
+                            <div id="about" class="tabcontent detail">
+                                <h3>About</h3>
+                                <div id="aboutDetails">
+
+                                </div>
+                                <h4>Weakness</h4>
+                                <ol class="types" id="olWeakness">
+                                    <!--Lista de tipos aqui-->
+                                </ol>
+                                <h4>Abilities</h4>
+                                <ol class="types" id="olAbilities">
+                                    <!--Lista de tipos aqui-->
+                                </ol>
+                            </div>
+
+                            <div id="baseStats" class="tabcontent">
+                                <h3>Base Stats</h3>
+                                <table>
+                                    <tr class="highlight">
+                                        <td class="name">Hp</td>
+                                        <td class="name" id="pokemonHp"> </td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="name">Atk</td>
+                                        <td class="name" id="pokemonAtk"> </td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="name">Def</td>
+                                        <td class="name" id="pokemonDef"> </td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="name">Satk</td>
+                                        <td class="name" id="pokemonSatk"> </td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="name">Sdef</td>
+                                        <td class="name" id="pokemonSdef"> </td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="name">Spd</td>
+                                        <td class="name" id="pokemonSpd"> </td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+
+                            <div id="moves" class="tabcontent detail">
+                                <h3>Moves</h3>
+                                <ol class="types" id="olMoves">
+                                    <!--Lista de tipos aqui-->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Nosso JS -->
+    <script src="/assets/js/tab.js"></script>
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
