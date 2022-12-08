@@ -7,6 +7,26 @@ const span = document.getElementsByClassName("close")[0];
 const modalClose = ()=>{modal.style.display = "none";}
 // When the user clicks on <span> (x), close the modal
 span.onclick = ()=>modalClose();
+// Get elements from modal
+const number = document.getElementById('number');
+const pkName = document.getElementById('name');
+const height = document.getElementById('height');
+const weight = document.getElementById('weight');
+const modalPokemonImg = document.getElementById('modalPokemonImg');
+const olTypes = document.getElementById('olTypes');
+const olWeakness = document.getElementById('olWeakness');
+const olAbilities = document.getElementById('olAbilities');
+const modalPokemon = document.getElementById('modalPokemon');
+//tab contents
+const aboutDetails = document.getElementById('aboutDetails');
+const olMoves = document.getElementById('olMoves');
+const pokemonHp = document.getElementById('pokemonHp');
+const pokemonAtk = document.getElementById('pokemonAtk');
+const pokemonDef = document.getElementById('pokemonDef');
+const pokemonSatk = document.getElementById('pokemonSatk');
+const pokemonSdef = document.getElementById('pokemonSdef');
+const pokemonSpd = document.getElementById('pokemonSpd');
+//
 
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -21,30 +41,12 @@ function modalDisplay(id){
     modal.style.display = "block";
     const dataPokemon = document.getElementById(id).getAttribute('data-pokemon');
     const pokemon = JSON.parse(dataPokemon);
-    const number = document.getElementById('number');
-    const name = document.getElementById('name');
-    const height = document.getElementById('height');
-    const weight = document.getElementById('weight');
-    const modalPokemonImg = document.getElementById('modalPokemonImg');
-    const olTypes = document.getElementById('olTypes');
-    const olWeakness = document.getElementById('olWeakness');
-    const olAbilities = document.getElementById('olAbilities');
-    const modalPokemon = document.getElementById('modalPokemon');
-    //tab contents
-    const aboutDetails = document.getElementById('aboutDetails');
-    const olMoves = document.getElementById('olMoves');
-    const pokemonHp = document.getElementById('pokemonHp');
-    const pokemonAtk = document.getElementById('pokemonAtk');
-    const pokemonDef = document.getElementById('pokemonDef');
-    const pokemonSatk = document.getElementById('pokemonSatk');
-    const pokemonSdef = document.getElementById('pokemonSdef');
-    const pokemonSpd = document.getElementById('pokemonSpd');
     //
     modalPokemon.className = "";
     modalPokemon.classList.add("pokemon");
     modalPokemon.classList.add(pokemon.type);
     number.innerHTML = pokemon.number;
-    name.innerHTML = pokemon.name;
+    pkName.innerHTML = pokemon.name;
     height.innerHTML = pokemon.height;
     weight.innerHTML = pokemon.weight;
     olTypes.innerHTML = `${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}`;
