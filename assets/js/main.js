@@ -54,14 +54,23 @@ function modalDisplay(id){
     olAbilities.innerHTML = `${pokemon.abilities.map((ability) => `<li class="type ${pokemon.type}">${ability}</li>`).join('')}`;
     modalPokemonImg.innerHTML = `<img src="${pokemon.photo}" alt="${pokemon.name}">`;
     aboutDetails.innerHTML = `${pokemon.about}`;
-    pokemonHp.innerHTML = `${pokemon.hp}`    
-    pokemonAtk.innerHTML = `${pokemon.atk}`;
-    pokemonDef.innerHTML = `${pokemon.def}`;
-    pokemonSatk.innerHTML = `${pokemon.satk}`;
-    pokemonSdef.innerHTML = `${pokemon.sdef}`;
-    pokemonSpd.innerHTML = `${pokemon.satk}`;
+    pokemonHp.innerHTML = statusBar(pokemon.hp)  
+    pokemonAtk.innerHTML = statusBar(pokemon.atk);
+    pokemonDef.innerHTML = statusBar(pokemon.def);
+    pokemonSatk.innerHTML = statusBar(pokemon.satk);
+    pokemonSdef.innerHTML = statusBar(pokemon.sdef);
+    pokemonSpd.innerHTML = statusBar(pokemon.satk);
     olMoves.innerHTML = `${pokemon.moves.map((move)=> `<li class="type ${pokemon.type}">${move}</li>`).join('')}`;
 }
+
+function statusBar(value) { 
+    const nValue = Math.round(value/252 * 100);
+    return `
+    <div class="progress">
+        <div class="progress-bar" style="width:${nValue}%;">${value}</div>
+    </div>
+    `
+ }
 
 function convertPokemonToLi(pokemon) {
     return `

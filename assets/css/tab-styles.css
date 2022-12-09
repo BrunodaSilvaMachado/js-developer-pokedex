@@ -13,7 +13,8 @@
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 7px 8px;
+    font-size: small;
     transition: 0.3s;
   }
   
@@ -40,8 +41,38 @@
     border-radius: 1rem;
   }
 
+  .tab-bottons{
+    display: flex;
+  }
+
+.progress{
+    height: 0.625rem;
+    background-color: #777;
+    position: relative;
+    border-radius: 1rem;
+    width: 25.2vw;
+}
+
+.progress .progress-bar{
+   position: absolute;
+   height: 100%;
+   background-color: #add555;
+   width: 1px;
+   border-radius: 0.825rem;
+   font-size: 0.625rem;
+   color: #777;
+   text-align: center;
+}
+
   /* Go from zero to full opacity */
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+  @media screen and (min-width: 380px) {
+    .tab button {
+      padding: 14px 16px;
+      font-size: medium;
+    }
+}
