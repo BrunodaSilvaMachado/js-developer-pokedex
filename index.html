@@ -47,16 +47,18 @@
                 <div class="pokemon" id="modalPokemon">
                     <span class="number" id="number"></span>
                     <span class="name" id="name"></span>
-                    <table>
-                        <tr class="highlight">
-                            <td class="name">height</td>
-                            <td class="name" id="height"> </td>
-                        </tr>
-                        <tr class="highlight">
-                            <td class="name">weight</td>
-                            <td class="name" id="weight"> </td>
-                        </tr>
-                    </table>
+                    <div class="min-table">
+                        <table>
+                            <tr class="highlight">
+                                <td class="name">height</td>
+                                <td class="name" id="height"> </td>
+                            </tr>
+                            <tr class="highlight">
+                                <td class="name">weight</td>
+                                <td class="name" id="weight"> </td>
+                            </tr>
+                        </table>
+                    </div>
 
                     <div class="detail" id="typesAndDetails">
                         <ol class="types" id="olTypes">
@@ -66,69 +68,71 @@
                             <!--Imagem do pokemon aqui-->
                         </div>
                     </div>
-                    <div class="tabs-details">
-                        <div class="tab">
-                            <div style="display: flex;">
-                                <button class="tablinks" type="button" onclick="openCity(event, 'about')" id="defaultOpen">About</button>
-                                <button class="tablinks" type="button" onclick="openCity(event, 'baseStats')">Base Stats</button>
-                                <button class="tablinks" type="button" onclick="openCity(event, 'moves')">Moves</button>
-                            </div>
-                            
-                            <!-- Tab content -->
-                            <div id="about" class="tabcontent detail">
-                                <h3>About</h3>
-                                <div id="aboutDetails">
 
-                                </div>
-                                <h4>Weakness</h4>
-                                <ol class="types" id="olWeakness">
-                                    <!--Lista de tipos aqui-->
-                                </ol>
-                                <h4>Abilities</h4>
-                                <ol class="types" id="olAbilities">
-                                    <!--Lista de tipos aqui-->
-                                </ol>
-                            </div>
+                    <div class="tab">
+                        <div class="tab-bottons">
+                            <button class="tablinks" type="button" onclick="openTab(event, 'about')"
+                                id="defaultOpen">About</button>
+                            <button class="tablinks" type="button" onclick="openTab(event, 'baseStats')">Base
+                                Stats</button>
+                            <button class="tablinks" type="button" onclick="openTab(event, 'moves')">Moves</button>
+                        </div>
 
-                            <div id="baseStats" class="tabcontent">
-                                <h3>Base Stats</h3>
-                                <table>
-                                    <tr class="highlight">
-                                        <td class="name">Hp</td>
-                                        <td class="name" id="pokemonHp"> </td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="name">Atk</td>
-                                        <td class="name" id="pokemonAtk"> </td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="name">Def</td>
-                                        <td class="name" id="pokemonDef"> </td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="name">Satk</td>
-                                        <td class="name" id="pokemonSatk"> </td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="name">Sdef</td>
-                                        <td class="name" id="pokemonSdef"> </td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="name">Spd</td>
-                                        <td class="name" id="pokemonSpd"> </td>
-                                    </tr>
-                                    
-                                </table>
-                            </div>
+                        <!-- Tab content -->
+                        <div id="about" class="tabcontent detail">
+                            <h3>About</h3>
+                            <div id="aboutDetails">
 
-                            <div id="moves" class="tabcontent detail">
-                                <h3>Moves</h3>
-                                <ol class="types" id="olMoves">
-                                    <!--Lista de tipos aqui-->
-                                </ol>
                             </div>
+                            <h4>Weakness</h4>
+                            <ol class="types" id="olWeakness">
+                                <!--Lista de tipos aqui-->
+                            </ol>
+                            <h4>Abilities</h4>
+                            <ol class="types" id="olAbilities">
+                                <!--Lista de tipos aqui-->
+                            </ol>
+                        </div>
+
+                        <div id="baseStats" class="tabcontent detail">
+                            <h3>Base Stats</h3>
+                            <table>
+                                <tr>
+                                    <td class="name highlight">Hp</td>
+                                    <td id="pokemonHp"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="name highlight">Atk</td>
+                                    <td id="pokemonAtk"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="name highlight">Def</td>
+                                    <td id="pokemonDef"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="name highlight">Satk</td>
+                                    <td id="pokemonSatk"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="name highlight">Sdef</td>
+                                    <td id="pokemonSdef"> </td>
+                                </tr>
+                                <tr>
+                                    <td class="name highlight">Spd</td>
+                                    <td id="pokemonSpd"> </td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div id="moves" class="tabcontent detail">
+                            <h3>Moves</h3>
+                            <ol class="types" id="olMoves">
+                                <!--Lista de tipos aqui-->
+                            </ol>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

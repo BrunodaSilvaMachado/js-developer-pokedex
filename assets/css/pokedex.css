@@ -152,14 +152,14 @@ h1 {
     border-radius: 1rem;
 }
 
-table {
+.min-table table {
     width: min-content;
 }
-tr {
+.min-table tr {
     border: 0;
     display: block;
 }
-td {
+.min-table td {
     padding: 0.125rem;
 }
 
